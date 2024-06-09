@@ -356,14 +356,14 @@
         gap: 10px;
         border-radius: 16px;
         background-color: var(--main-color);
-        box-shadow: 0px 18px 0px 0px #A93861;
+        box-shadow: 0px 18px 0px 0px rgba(69, 0, 39, 0.50);
         transform: translateY(-9px);
         transition: all 0.2s;
         cursor: pointer;
     }
 
     .cta-big > .cta-btn-big:hover {
-        box-shadow: 0px 0px 0px 0px #A93861;
+        box-shadow: 0px 0px 0px 0px rgba(69, 0, 39, 0.50);
         transform: translateY(9px);
     }
 
@@ -807,12 +807,12 @@
         gap: 5px;
         border-radius: 8px;
         background-color: var(--main-color);
-        box-shadow: 0px 9px 0px 0px #A93861;
+        box-shadow: 0px 9px 0px 0px rgba(69, 0, 39, 0.50);
         transform: translateY(-4.5px);
     }
 
     .cta-big > .cta-btn-big:hover {
-        box-shadow: 0px 0px 0px 0px #A93861;
+        box-shadow: 0px 0px 0px 0px rgba(69, 0, 39, 0.50);
         transform: translateY(4.5px);
     }
 
