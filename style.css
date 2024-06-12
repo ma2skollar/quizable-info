@@ -488,6 +488,11 @@
         line-height: normal;
         margin: 0;
     }
+
+    .impressum {
+        margin-top: 90px;
+        padding: 0 80px;
+    }
 }
 
 /* Mobile */
@@ -937,5 +942,10 @@
         font-weight: 700;
         line-height: normal;
         margin: 0;
+    }
+
+    .impressum {
+        margin-top: 70px;
+        padding: 0 20px;
     }
 }
