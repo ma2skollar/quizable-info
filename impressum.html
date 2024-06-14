@@ -42,8 +42,6 @@
     <section class="impressum">
         <h1>Imprint</h1>
         <p>Quizable is a project developed at the St. Pölten University of Applied Sciences (FHSTP), Austria, as part of the MediaLab semester project of the Creative Computing Bachelor Programme.</p>
-        <h2>Collected Data</h2>
-        <p>Quizable collects and saves a user's e-mail address, if they decide to create a quiz and enter their address. This address is then shared with Google Firebase in order to support base functionality.</p>
         <h2>Contributors</h2>
         <p>
             Katharina Wurm
@@ -64,6 +62,29 @@
         <p>
             The license to Quizable can be found on the GitHub repository at <a href="https://github.com/kkatharinaa/quizable/blob/main/LICENSE">https://github.com/kkatharinaa/quizable/blob/main/LICENSE
             </a>
+        </p>
+        <h2>Collected Data</h2>
+        <p>
+            If a user decides to "create a quiz" and thus create an account using their email address, the following data will be collected and processed:<br>
+        <ul>
+            <li>Email address: Stored and processed within Google Firebase. This is necessary to allow the user to log in, as well as to create, edit, delete, and host quizzes. The email address is also temporarily saved in the user’s localStorage during the login process to make logging in faster.</li>
+            <li>Quizzes: The quizzes created and managed by a user are stored in Firebase Firestore. Additionally, when hosting, the selected quiz data will temporarily be saved on the backend server running on Google Cloud Run.</li>
+        </ul>
+
+        If a user decides to "join a quiz", the following data related to their quiz participation will be temporarily saved on the backend server running on Google Cloud Run:<br>
+        <ul>
+            <li>Player's quiz data: Includes the player’s randomly generated ID for the quiz session (*), the player's nickname, the device ID used to connect to the quiz (*), the player's total score, and for each given answer: which answer the player selected, the time taken to answer, and points received for the chosen answer.</li>
+            <li>At the end of the quiz, the host can request a report of this data to be sent to their registered email address (data marked with an asterisk (*) is excluded from the host’s report). We take no responsibility for the data after it is sent. Upon termination of the quiz session, the player’s data will be removed from the server.</li>
+        </ul>
+
+        When hosting or playing a quiz, the following data will be stored in the user’s localStorage to facilitate easy reconnecting after disconnecting:<br>
+        <ul>
+            <li>Quiz session ID: The ID of the quiz session on the server.</li>
+            <li>Hosting data: When hosting, the ID of the quiz within Firebase Firestore.</li>
+            <li>Player data: When playing, the player’s information, consisting of a randomly generated ID, chosen nickname, and the user’s device ID.</li>
+        </ul>
+
+        For more information on how your data is being processed, you are welcome to look at the project's source code at <a href="https://github.com/kkatharinaa/quizable">https://github.com/kkatharinaa/quizable</a>. By using Quizable, you agree to the processing of your data as described above.
         </p>
     </section>
 </body>
